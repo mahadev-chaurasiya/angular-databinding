@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app2-data-binding';
+  serverID =1200;
+  serverStatus = "OK"
+
+  getStatus(){
+    return this.serverStatus;
+  }
 }
