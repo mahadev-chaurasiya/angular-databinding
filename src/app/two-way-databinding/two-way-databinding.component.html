@@ -1,1 +1,20 @@
-<p>two-way-databinding works!</p>
+<!-- Important: For Two-Way-Binding you need to enable the ngModel  directive. 
+    This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+    You then also need to add the import from @angular/forms  in the app.module.ts file:
+    
+    import { FormsModule } from '@angular/forms'; -->
+    <p>Two way binding</p>
+    <button>Add server</button>
+<input type="text" 
+class="form-controll"
+[(ngModel)]="serverName">
+<br>
+<label>{{serverName}}</label>
+<br>
+<input type="text" 
+class="form-controll"
+(input)="getServerNameByEvent($event)">
+<br>
+<label>{{serverName}}</label>
+

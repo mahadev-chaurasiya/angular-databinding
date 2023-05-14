@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./two-way-databinding.component.css']
 })
 export class TwoWayDatabindingComponent {
+ serverName = 'Server name Stopped';
 
+ getServerNameByEvent(event: Event){
+   this.serverName = (<HTMLInputElement>event.target).value;
+ }
 }
